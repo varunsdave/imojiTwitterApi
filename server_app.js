@@ -18,14 +18,14 @@ server_app.use(bodyParser.json());
 server_app.use(bodyParser.urlencoded({ extended: true }));
 
 
-var dbConnectionString = 'mongodb://localhost/trendsTester';
+var dbConnectionString = 'INSERT_DB_PATH';
 
 mongoose.connect(dbConnectionString);
 
 // connect twitter
 var oauth2 = new OAuth2(
-  'qSKC9NfhIcArbmlhn6Gf4TyhU',
-  'WxxxdWmacaNJq2rw0SGNPwOP6DHC9iE8HAcHVLd6j8e582wrNH',
+  'INSERT_KEY',
+  'INSERT_PHRASE',
   'https://api.twitter.com/',
   null,
   'oauth2/token',

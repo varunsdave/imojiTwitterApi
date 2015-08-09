@@ -21,7 +21,7 @@ router.get( getTopics, function(req, res) {
     });
   } else {
     Tweet.find({ trendName: new RegExp('^' + q, 'i')}, function(err, trendNames) {
-      console.log(trendNames);
+      //console.log(trendNames);
       return res.status(200).json(trendNames);
     
     });
@@ -86,7 +86,6 @@ router.post( postTopics, function(req, res) {
           }
           var trends = rest.body[0].trends;
             trends.forEach(function(trend) {
-              console.log(trend);
               var trends = rest.body[0].trends;
               res.send(trends.name , 200);
               Tweet.create({ trendName: trend.name,
