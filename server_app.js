@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var server_app = express();
 
 // listen on port
-var server = server_app.listen(4000, function() {
+var server = server_app.listen(8080, function() {
   var host = server.address().address;
   var port = server.address().port;
   console.log('server_app started at http://%s:%s', host, port);
